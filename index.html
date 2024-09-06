@@ -1,0 +1,13 @@
+<head>
+{% set title = "Blog Posts" %}
+{% extends 'base.html' %}
+<link rel="stylesheet" href=css/styles.css>
+</head>
+{% block content %}
+    <ul>
+        {% for post in posts %}
+            <li><a href="{{ url_for('post', post_id=post.id) }}">{{ post }}</a></li>
+        {% endfor %}
+    </ul>
+    <!--<div class="container blog-posts"></div>-->
+{% endblock %}

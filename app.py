@@ -83,10 +83,10 @@ def stats():
         total_length=sum(post_lengths),
     )
 
-# REST API 
-#@app.route("/api/", methods=['GET'])
-#def rest_index():
-#    return jsonpickle.encode(BlogPost.query.all())
+REST API 
+@app.route("/api/", methods=['GET'])
+def rest_index():
+return jsonpickle.encode(BlogPost.query.all())
 
 
 if __name__ == "__main__":
